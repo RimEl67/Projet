@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <title>Restaurant website</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<style>
+    #form{ 
+  width: 350px; height: 400px;
+    background: linear-gradient(to top, rgba(5, 5, 5, 0.8)50%,rgba(5, 5, 5, 0.8)50%);
+    position: absolute;
+    top: 140px;
+    left: 460px;
+    transform: translate(0%,-5%);
+    padding: 50px;
+
+
+    }
+
+
+#form input{
+    margin-left: 39px;
+    width: 190px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 2px solid #ff7200;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+#form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: beige;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+}
+#form .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #020202;
+    
+}
+.btn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.btn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+</style>
+
+<body>
+<div class="image">
+
+    <div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">NABI</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">REVIEWS</a></li>&emsp;&emsp;&emsp;
+                
+            </ul>
+        </div>
+
+    </div> 
+
+    <form id="form">
+        <div class="input">
+            <label for="email" style="color:beige; font-weight: bold;">E-mail :</label>
+            <input id="email" type="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="input">
+            <label for="pass" style="color:beige; font-weight: bold;">Mot de Passe :</label>
+            <input id="pass" type="password" placeholder="Enter Password" required>
+        </div>
+        <input type="checkbox" onclick="showPass()"> Show Password
+        <button class="btn" type="submit">Login</button>
+
+        <p class="link">If you don't have an account
+            <a href="SUP.html">Sign up </a> here</a> 
+           <a href="SUP.html"> <button style="color: black; font-weight: bold;"  class="btn" >Sign UP</button></p></a><br>
+
+
+    </form>
+
+    </div> 
+
+    <script>
+        const form = document.getElementById("form");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("email").value;
+            const password = document.getElementById("pass").value;
+            const storedUsername = localStorage.getItem("email");
+            const storedPassword = localStorage.getItem("pass");
+            if (username === storedUsername && password === storedPassword) {
+                alert("Successful Registration !");
+                window.location.href = "home.html";
+            } else {
+                alert("Password incorrect.");
+            }
+        });
+
+        function showPass(){
+
+            var passInput = document.getElementById('pass');
+
+            if(passInput.type == 'password'){
+                passInput.type = 'text';
+            }else if(passInput.type == 'text'){
+                passInput.type = 'password';
+            }
+        }
+    </script>
+
+                </body>
+
+                
+</html> 
