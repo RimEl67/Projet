@@ -1,0 +1,281 @@
+<html>
+<head>
+    <title>Menu </title>
+
+</head>
+<style>
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f3f3f3;
+    font-family: 'Poppins',sans-serif;
+}
+.menu{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px; /*20 pixels for (top and bottom) and 40 pixels for gap (left and right).*/
+}
+.heading{
+    background-color: #d31e1e;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding: 10px 30  0px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.heading>h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.heading>h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 81, 0, 0.932);
+    margin: 0 20px;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+}
+.price{
+    text-align: right;
+}
+.details>p{
+    color: #6f6f6f;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+.details>button{
+    background-color: #cb202d;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 180px;
+}
+ 
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ffd000;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #020202;
+    
+    
+}
+
+.btnn:hover{
+    background: #fff;
+    color: #ff7300;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+
+}
+</style>
+
+<body>
+    
+    <div class="menu">
+        <div class="heading">
+            <h1>NABI'S MENU</h1>
+            <h3>&mdash; MENU &mdash; </h3>
+        </div>
+        <div class="food-items">
+            <img src="https://media.theeverygirl.com/wp-content/uploads/2020/05/recipes-to-recreate-restaurant-meals-the-everygirl-15.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Grilled Cheese Sandwich</h5>
+                    <h5 class="price"> 40DH </h5>
+                </div>
+                <p>The sandwich is typically cooked on a griddle or in a pan until the bread becomes crispy and golden brown, while the cheese inside melts into a gooey and delicious filling. It's a simple yet satisfying dish that's loved by people of all ages.</p>
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="https://media.theeverygirl.com/wp-content/uploads/2020/05/recipes-to-recreate-restaurant-meals-the-everygirl-9.png">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Baked Buffalo Wings</h5>
+                    <h5 class="price"> 75DH </h5>
+                </div>
+                <p>The wings are typically marinated with a combination of spices, baked until crispy, and then tossed in a mixture of hot sauce, butter, and other seasonings. The result is a flavorful and fiery dish with a crispy exterior and tender, juicy meat inside, perfect for serving as a crowd-pleasing snack or party food.</p>
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="https://media.theeverygirl.com/wp-content/uploads/2020/05/recipes-to-recreate-restaurant-meals-the-everygirl-14.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Spaghetti Carbonara</h5>
+                    <h5 class="price"> 80DH </h5>
+                </div>
+                <p>It consists of spaghetti noodles tossed with crispy bacon or pancetta, eggs, Parmesan cheese, black pepper, and cream. The heat from the cooked pasta and bacon slightly cook the eggs, creating a velvety sauce that coats the strands of pasta. </p>
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/szechuanpesto2-1642542226.jpg?resize=980:*">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Basil Pesto Spaghetti</h5>
+                    <h5 class="price">70DH </h5>
+                </div>
+                <p> It features al dente spaghetti noodles tossed with a fragrant and vibrant sauce made from fresh basil leaves, garlic, pine nuts, Parmesan cheese, and olive oil. The basil pesto sauce imparts a delightful herbal aroma and a burst of fresh, earthy flavors to the dish. It's a simple yet satisfying combination that brings out the best of the basil and makes for a delicious and quick meal option.</p>
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="https://media.theeverygirl.com/wp-content/uploads/2020/05/recipes-to-recreate-restaurant-meals-the-everygirl-18.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Sweet and Spicy Orange Salmon</h5>
+                    <h5 class="price"> 95DH </h5>
+                </div>
+                <p> It involves marinating fresh salmon fillets in a mixture of sweet and tangy orange juice, spicy chili flakes or sriracha, soy sauce, honey, garlic, and ginger. The salmon is then either baked, grilled, or pan-seared to perfection, resulting in a caramelized and slightly charred exterior while remaining tender and flaky inside. </p>
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="https://media.theeverygirl.com/wp-content/uploads/2020/05/recipes-to-recreate-restaurant-meals-the-everygirl-20.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Classic Burger with Killer Burger Sauce</h5>
+                    <h5 class="price"> 45DH </h5>
+                </div>
+                <p>This iconic dish consists of a juicy beef patty cooked to perfection and nestled between soft burger buns. The patty is typically seasoned with salt, pepper, and other spices, and grilled or pan-fried to achieve a delicious charred exterior while keeping the inside tender and flavorful.</p>
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="https://media.theeverygirl.com/wp-content/uploads/2020/05/recipes-to-recreate-restaurant-meals-the-everygirl-25.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Baked Crispy Cheddar Chicken Fingers</h5>
+                    <h5 class="price"> 60DH </h5>
+                </div>
+                <p>The dish involves coating chicken strips in a mixture of breadcrumbs, grated cheddar cheese, and various spices like garlic powder, paprika, and black pepper. The chicken fingers are then baked in the oven until they turn golden brown and crispy.</p>
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="https://media.theeverygirl.com/wp-content/uploads/2020/05/recipes-to-recreate-restaurant-meals-the-everygirl-10.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Caesar Salad</h5>
+                    <h5 class="price"> 40DH </h5>
+                </div>
+                <p >The dressing is made with ingredients like garlic, anchovies, Dijon mustard, Worcestershire sauce, lemon juice, olive oil, and sometimes egg yolks. The lettuce leaves are typically tossed in the dressing, along with grated Parmesan cheese and crunchy croutons, resulting in a refreshing and flavorful combination. </p>
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/220615-delish-seo-04-harissa-grilled-chicken-vertical-v2-1752-eb-1659539214.jpg?crop=0.828xw:0.915xh;0.0697xw,0.0313xh&resize=980:*">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Harissa Grilled Chicken</h5>
+                    <h5 class="price"> 80DH </h5>
+                </div>
+                <p>PHOTO: ERIK BERNSTEIN; FOOD STYLING: BROOKE CAISON
+                    Harissa Grilled Chicken
+                    In the world of powerhouse pantry staples, harissa (a spicy chili condiment native to North Africa) is a flavor bomb. We’re no strangers to its magic here at Delish—we've already stirred it into clams and aioli, and used it to spice up turkey breast and meatballs—and now we’re tapping it again for this easy, throw-together marinade for grilled chicken.</p>
+                <button>Order</button>
+            </div>
+        </div>
+
+         <div class="food-items">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/stuffed-pepper-casserole2-1661194658.jpg?crop=0.651xw:0.721xh;0.158xw,0.148xh&resize=980:*">
+        <div class="details">
+            <div class="details-sub">
+                <h5>Stuffed Pepper Casserole</h5>
+                <h5 class="price"> 75DH </h5>
+            </div>
+            <p>The wings are typically marinated with a combination of spices, baked until crispy, and then tossed in a mixture of hot sauce, butter, and other seasonings. The result is a flavorful and fiery dish with a crispy exterior and tender, juicy meat inside, perfect for serving as a crowd-pleasing snack or party food.</p>
+            <button>Order</button>
+        </div>
+    </div>
+
+    <div class="food-items">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/cauliflower-au-gratin-1648146394.jpg?crop=0.879xw:0.881xh;0.119xw,0&resize=980:*">
+        <div class="details">
+            <div class="details-sub">
+                <h5>Cauliflower Au Gratin</h5>
+                <h5 class="price"> 50DH </h5>
+            </div>
+            <p>This recipe begins with the ingredients you love from classic stuffed peppers: ground beef, large chunks of peppers and onion, a deep bench of seasonings, and a tomato-heavy broth. A cup of rice dives into that pool of liquid gold, the whole thing slides in the oven, and within minutes, you have a warm and hearty meal ready to feed a crowd.</p>
+            <button>Order</button>
+        </div>
+    </div>
+
+
+    <div class="food-items">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/20200512-blueberry-pie-delish-ehg-10823-1589574426.jpg?crop=1xw:1xh;center,top&resize=980:*">
+        <div class="details">
+            <div class="details-sub">
+                <h5>Blueberry Pie</h5>
+                <h5 class="price"> 39DH </h5>
+            </div>
+            <p>Fresh blueberry pie makes us want to sit on the back porch and enjoy the warm summer breeze. Just add homemade ice cream.</p>
+            <button>Order</button>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+    
+    <footer>
+        <a href="home.html"><button class="btnn">Back Home</button></a>
+    </footer>
+</body>
+</html>
