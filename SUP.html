@@ -31,18 +31,6 @@
     font-family: sans-serif;
 }
 
-#form .link{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    color: beige;
-    font-weight: bold;
-    padding-top: 20px;
-    text-align: center;
-}
-#form .link a{
-    text-decoration: none;
-    color: #ff7200;
-}
 
 
 ::placeholder{
@@ -67,13 +55,7 @@
     background: #fff;
     color: #ff7200;
 }
-.btn a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
 </style>
-
 <body>
 <div class="image">
 
@@ -86,7 +68,7 @@
         <div class="menu">
             <ul>
                 <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">ABOUT</a></li>
                 <li><a href="#">CONTACT</a></li>
                 <li><a href="#">MENU</a></li>
                 <li><a href="#">REVIEWS</a></li>&emsp;&emsp;&emsp;
@@ -94,59 +76,66 @@
             </ul>
         </div>
 
-    </div> 
-
-    <form id="form">
-        <div class="input">
-            <label for="email" style="color:beige; font-weight: bold;">E-mail :</label>
-            <input id="email" type="email" placeholder="Enter your Email" required>
-        </div>
-        <div class="input">
-            <label for="pass" style="color:beige; font-weight: bold;">Mot de Passe :</label>
-            <input id="pass" type="password" placeholder="Enter Password" required>
-        </div>
-        <input type="checkbox" onclick="showPass()"> Show Password
-        <button class="btn" type="submit">Login</button>
-
-        <p class="link">If you don't have an account
-            <a href="SUP.html">Sign up </a> here</a> 
-           <a href="SUP.html"> <button style="color: black; font-weight: bold;"  class="btn" >Sign UP</button></p></a><br>
-
-
-    </form>
-
-    </div> 
-
-    <script>
-        const form = document.getElementById("form");
-
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-            const username = document.getElementById("email").value;
-            const password = document.getElementById("pass").value;
-            const storedUsername = localStorage.getItem("email");
-            const storedPassword = localStorage.getItem("pass");
-            if (username === storedUsername && password === storedPassword) {
+        <form id="form">
+            <div class="input">
+                <label for="fname" style="color:beige; font-weight: bold;">First Name :</label>
+                <input id="fname" type="text" placeholder="Enter your first name">
+            </div>
+            <div class="input">
+                <label for="lname" style="color: beige; font-weight: bold;">Last Name :</label>
+                <input id="lname" type="text" placeholder="Enter your last name">
+            </div>
+            <div class="input">
+                <label for="email" style="color: beige; font-weight: bold;">E-mail :</label>
+                <input id="email" type="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="input">
+                <label for="pass" style="color: beige; font-weight: bold;">Password :</label>
+                <input id="pass" type="password" placeholder="Enter Password" required>
+            </div>
+                <input type="checkbox" onclick="showPass()" > Show Password
+            <div>
+                <span id="s1" style="color: #fa1b1b;"></span>
+            </div>
+            <button class="btn" onclick="add()" type="submit">Sign Up</button>
+        </form>
+        
+        
+        <script>
+            function add(){
+                document.getElementById('s1').innerHTML = '';
+                var passValue = document.getElementById('pass').value;
+    
+                if(passValue.length < 8){
+                    document.getElementById('s1').innerHTML = 'Password Must Contains 8 Characters.'
+                }else{
+                event.preventDefault();
+                const username = document.getElementById("fname").value;
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("pass").value;
+                localStorage.setItem("fname", username);
+                localStorage.setItem("email", email);
+                localStorage.setItem("pass", password);
                 alert("Successful Registration !");
-                window.location.href = "home.html";
-            } else {
-                alert("Password incorrect.");
+                window.location.href ="signup.html";
+                }
             }
-        });
-
-        function showPass(){
-
-            var passInput = document.getElementById('pass');
-
-            if(passInput.type == 'password'){
-                passInput.type = 'text';
-            }else if(passInput.type == 'text'){
-                passInput.type = 'password';
+            const form = document.getElementById("form");
+    
+            form.addEventListener("submit", function(event) {
+                add();
+            });
+    
+            function showPass(){
+    
+                var passInput = document.getElementById('pass');
+    
+                if(passInput.type == 'password'){
+                    passInput.type = 'text';
+                }else if(passInput.type == 'text'){
+                    passInput.type = 'password';
+                }
             }
-        }
-    </script>
-
-                </body>
-
-                
-</html> 
+        </script>
+</body>
+    </html>
